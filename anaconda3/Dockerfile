@@ -26,4 +26,10 @@ RUN pyenv global anaconda3-5.1.0
 ENV PATH $PYENV_ROOT/versions/anaconda3-5.1.0/bin/:$PATH
 RUN conda update conda
 
-#numpy scipy pandas jupyter scikit-learn matplotlib
+# install and update packages
+RUN pip install numpy && \
+    pip install scipy && \
+    pip install pandas && \
+    pip install jupyter && \
+    pip install scikit-learn && \
+    pip install matplotlib
